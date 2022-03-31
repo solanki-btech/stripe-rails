@@ -10,8 +10,14 @@ gem 'sqlite3', group: [:development, :test]
 # use postgres for production
 gem 'pg', group: :production
 
+gem 'pry'
 gem 'rails_12factor', group: :production
 
+# stripe for payments 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
+# figaro to secure configs
+gem 'figaro'
 #add twitter bootstrap 
 gem 'bootstrap-sass'
 
