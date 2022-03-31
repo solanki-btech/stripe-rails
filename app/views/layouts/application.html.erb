@@ -2,13 +2,13 @@
 <html>
   <head>
     <title>LearnRailsPayments</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800' >
 
+    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -19,7 +19,7 @@
           <div id="price-container">
             <span class="glyphicon glyphicon-tag"></span><span class="price">$9.99</span>
           </div>
-          <%= image_tag('header-image', id: 'content-head-img', alt: 'Learn Rails!') %>
+          <%= image_tag('header-image.jpg', id: 'content-head-img', alt: 'Learn Rails!') %>
       </header>
       <%= yield %>
     </div>
