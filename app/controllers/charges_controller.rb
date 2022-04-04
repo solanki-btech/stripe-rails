@@ -14,7 +14,7 @@ class ChargesController < ApplicationController
       # payment_method_types: ['card'],
     )
     
-    purchase = Purchase.create(email: params[:stripeEmail], description: charge.description, card: params[:stripeToken], currency: charge.currency, amount: params[:amount], customer_id: customer.id, product_id: 1)
+    purchase = Purchase.create(email: params[:stripeEmail], description: charge.description, card: params[:stripeToken], currency: charge.currency, amount: params[:amount], customer_id: customer.id, product_id: 1, uuid: SecureRandom.uuid)
     
     redirect_to purchase
 
