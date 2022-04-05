@@ -2,18 +2,10 @@
 
 <section id="content-details" class="row clearfix">
     <article id="details-article" class="col-sm-8">
-        <h1 id="article-title">Your Product <span class="font-weight-light">Product Name</span></h1>
-        
-
-        <p>Lorem ipsum dolor sit amet, in nam feugiat eleifend. Sea an possit offendit definiebas, usu cu aeque mediocritatem. Vis constituam suscipiantur ad, cum duis concludaturque no. Sea vocent consulatu at.</p>
-
-        <p>Lorem ipsum dolor sit amet, pri id tractatos torquatos, eruditi alienum eam ad. Sint graeci mel te. Ex eius corrumpit.</p>
-        <p><strong>What You Get</strong></p>
-        <ul class="no-indent">
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Lorem ipsum dolor sit amet, cum.</li>
-            <li>Lorem ipsum dolor sit amet, quo ne etiam.</li>
-        </ul>
+        <h1 id="article-title"><%= @product.title %></h1>
+        <span class="font-weight-light"><%= @product.subtitle %></span>
+    
+        <%= raw @product.description %>
     </article>
     <aside id="details-aside" class="col-sm-4">
 
@@ -26,7 +18,7 @@
           <script src="https://checkout.stripe.com/checkout.js"></script>
           <%= hidden_field_tag 'stripeToken' %>
           <%= hidden_field_tag 'stripeEmail' %>
-          <%= hidden_field_tag 'amount', 499 %>
+          <%= hidden_field_tag 'amount', @product.price_in_cents %>
           <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block"><span class="gyphicon glyphicon-ok"></span>Buy this!</button>
           <script>
             var handler = StripeCheckout.configure({
@@ -40,7 +32,7 @@
             document.getElementById('btn-buy').addEventListener('click', function(e){
               handler.open({
                 name: 'Learn Rails',
-                description: 'Buy the item for $4.99',
+                description: "<%= @product.title %> $<%= @product.price %>",
                 amount: document.getElementById('amount')
               });
               e.preventDefault();
@@ -48,12 +40,9 @@
           </script>
         <% end %>
 
-        
-
         <ul id="details-infobox" class="list-group">
           <li class="list-group-item active clearfix">Info</li>
-          <li class="list-group-item">What You Get</li>
-          <li class="list-group-item">This Is Included</li>
+          <li class="list-group-item"><%= @product.subtitle %></li>
         </ul>
     </aside>
 </section>
