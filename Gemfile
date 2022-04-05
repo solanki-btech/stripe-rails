@@ -16,9 +16,19 @@ gem 'rails_12factor', group: :production
 # stripe for payments 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+# to browse mail in development locally
 gem 'letter_opener', group: [:development]
+
 # figaro to secure configs
 gem 'figaro'
+
+# add active admin 
+gem 'activeadmin'
+gem 'inherited_resources'
+
+# add devise for user authentication
+gem 'devise'
+
 #add twitter bootstrap 
 gem 'bootstrap-sass'
 
