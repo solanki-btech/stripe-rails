@@ -16,6 +16,7 @@ gem 'rails_12factor', group: :production
 # stripe for payments 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+gem 'letter_opener', group: [:development]
 # figaro to secure configs
 gem 'figaro'
 #add twitter bootstrap 
