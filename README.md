@@ -1,24 +1,24 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Application : Stripe payment processing with Heroku | AWS S3 | Sendgrid | Active Admin
 
-* Ruby version
+Heroku app : https://learn-rail-payments.herokuapp.com/
 
-* System dependencies
+Stripe/Sendgrid keys : config/application.yml
+Stripe test card : 4242 4242 4242 4242
 
-* Configuration
+Heroku commands used : 
 
-* Database creation
+heroku login
+heroku apps:create learn_rails_payment
+git push heroku master
+Heroku run rails db:migrate db:seed
+heroku config:set PUBLISHABLE_KEY=p
+heroku addons:create sendgrid:starter
+heroku config:get SENDGRID_USERNAME
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Docs & links : 
+https://stripe.com/docs/api
+https://dashboard.stripe.com/
+https://dashboard.heroku.com/
