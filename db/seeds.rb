@@ -9,14 +9,14 @@ AdminUser.create!(email: 'admin@example.com', password: 'password', password_con
 
 niceCat = Product.create(title: "Quality Kitty",
   subtitle: "Learn App code", 
-  image_name: "kitty.JPG",
+  image_name: "kitty.jpg",
   price: "4.99", sku: "kittyOne", download_url: "https://rails-learn-app-bucket.s3.ap-south-1.amazonaws.com/dell-2.jpg",
   details: "A really nice Cat", description: %{<p>Its a cat</p>}
 )
 
 niceDoggo = Product.create(title: "Quality Doggo",
   subtitle: "Learn App code", 
-  image_name: "doggo.JPG",
+  image_name: "doggo.jpg",
   price: "4.99", sku: "kittyOne", download_url: "https://rails-learn-app-bucket.s3.ap-south-1.amazonaws.com/dell-2.jpg",
   details: "A really nice Doggo", description: %{<p>Its a doggo</p>}
 )
