@@ -17,6 +17,6 @@ niceCat = Product.create(title: "Quality Kitty",
 niceDoggo = Product.create(title: "Quality Doggo",
   subtitle: "Learn App code", 
   image_name: "doggo.jpg",
-  price: "4.99", sku: "kittyOne", download_url: "https://rails-learn-app-bucket.s3.ap-south-1.amazonaws.com/dell-2.jpg",
+  price: "5.99", sku: "doggoOne", download_url: "https://rails-learn-app-bucket.s3.ap-south-1.amazonaws.com/dell-2.jpg",
   details: "A really nice Doggo", description: %{<p>Its a doggo</p>}
 )
